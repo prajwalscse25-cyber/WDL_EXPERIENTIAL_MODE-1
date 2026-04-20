@@ -1,0 +1,503 @@
+/* ============================= */
+/* TechFront 2024 Conference    */
+/* Main Stylesheet              */
+/* ============================= */
+
+:root {
+  --primary-color: #1a3a6e;
+  --secondary-color: #c9993a;
+  --accent-color: #0a1628;
+  --light-bg: #f8f4ed;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-light: #4b5563;
+  --border-color: #e8b84b;
+  --success-color: #27ae60;
+  --error-color: #c0392b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* HEADER SECTION               */
+/* ============================= */
+
+header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: var(--white);
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.intro {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.intro p {
+  margin: 10px 0;
+}
+
+/* ============================= */
+/* NAVIGATION                    */
+/* ============================= */
+
+nav {
+  background-color: var(--accent-color);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 3px solid transparent;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+}
+
+/* ============================= */
+/* SECTIONS GENERAL              */
+/* ============================= */
+
+section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+}
+
+/* ============================= */
+/* SCHEDULE SECTION              */
+/* ============================= */
+
+#schedule {
+  background-color: var(--light-bg);
+}
+
+#schedule img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+}
+
+table thead {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+table th {
+  font-weight: 600;
+}
+
+/* ============================= */
+/* SPEAKERS SECTION              */
+/* ============================= */
+
+#speakers {
+  background-color: var(--white);
+}
+
+.speakers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.speaker {
+  background-color: var(--light-bg);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.speaker img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid var(--secondary-color);
+  object-fit: cover;
+}
+
+.speaker h3 {
+  color: var(--primary-color);
+  margin: 15px 0;
+  font-size: 1.3rem;
+}
+
+.speaker p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* ============================= */
+/* TICKETS SECTION               */
+/* ============================= */
+
+#tickets {
+  background-color: var(--light-bg);
+}
+
+.tickets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.ticket-card {
+  background-color: var(--white);
+  border-left: 5px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.ticket-card:hover {
+  transform: scale(1.05);
+}
+
+.ticket-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.ticket-card .price {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.ticket-card progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.ticket-card progress::-webkit-progress-bar {
+  background-color: #e0e0e0;
+}
+
+.ticket-card progress::-webkit-progress-value {
+  background-color: var(--secondary-color);
+}
+
+/* ============================= */
+/* REGISTRATION FORM             */
+/* ============================= */
+
+#register {
+  background-color: var(--white);
+}
+
+.registration-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: var(--light-bg);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 8px rgba(201, 153, 58, 0.2);
+}
+
+.form-group fieldset {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 8px;
+}
+
+.form-group legend {
+  font-weight: 600;
+  color: var(--text-dark);
+  padding: 0 10px;
+}
+
+.form-group label input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* VIDEO SECTION                 */
+/* ============================= */
+
+#promo {
+  background-color: var(--light-bg);
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 30px auto;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ============================= */
+/* FOOTER SECTION                */
+/* ============================= */
+
+footer {
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: 40px;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 3px solid var(--secondary-color);
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.footer-content a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: var(--border-color);
+}
+
+.footer-nav {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(201, 153, 58, 0.3);
+}
+
+.footer-nav a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN             */
+/* ============================= */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .speakers-container,
+  .tickets-container {
+    grid-template-columns: 1fr;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 30px 15px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 20px 15px;
+  }
+
+  .registration-form {
+    padding: 20px;
+  }
+}
