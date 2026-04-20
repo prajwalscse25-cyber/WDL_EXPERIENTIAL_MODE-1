@@ -1,0 +1,184 @@
+{
+  "event": {
+    "name": "TechFront 2024",
+    "tagline": "Annual Technology Conference",
+    "date": {
+      "start": "2024-11-15",
+      "end": "2024-11-16",
+      "displayFormat": "November 15-16, 2024"
+    },
+    "location": {
+      "venue": "Mumbai Convention Center",
+      "city": "Mumbai",
+      "country": "India"
+    },
+    "email": "info@techfront2024.com",
+    "phone": "+91-98765-43210",
+    "website": "https://techfront2024.com"
+  },
+  "tickets": [
+    {
+      "id": "general",
+      "name": "General Pass",
+      "price": 999,
+      "currency": "INR",
+      "available": 120,
+      "total": 200,
+      "description": "Standard access to all conference sessions"
+    },
+    {
+      "id": "professional",
+      "name": "Professional Pass",
+      "price": 2499,
+      "currency": "INR",
+      "available": 45,
+      "total": 100,
+      "description": "Premium access with networking opportunities"
+    },
+    {
+      "id": "vip",
+      "name": "VIP Pass",
+      "price": 4999,
+      "currency": "INR",
+      "available": 8,
+      "total": 30,
+      "description": "Exclusive VIP access with reserved seating"
+    },
+    {
+      "id": "student",
+      "name": "Student Pass",
+      "price": 499,
+      "currency": "INR",
+      "available": 180,
+      "total": 300,
+      "description": "Special pricing for valid student IDs"
+    }
+  ],
+  "speakers": [
+    {
+      "id": "speaker1",
+      "name": "Dr. Aisha Sharma",
+      "topic": "Future of AI",
+      "image": "https://picsum.photos/100/100?random=10",
+      "bio": "Leading AI researcher and technology innovator"
+    },
+    {
+      "id": "speaker2",
+      "name": "Mr. Rohan Mehta",
+      "topic": "AI in Healthcare",
+      "image": "https://picsum.photos/100/100?random=11",
+      "bio": "Healthcare technology specialist"
+    },
+    {
+      "id": "speaker3",
+      "name": "Ms. Priya Nair",
+      "topic": "Web3 and Blockchain",
+      "image": "https://picsum.photos/100/100?random=12",
+      "bio": "Blockchain enthusiast and Web3 developer"
+    },
+    {
+      "id": "speaker4",
+      "name": "Mr. Vikram Das",
+      "topic": "Cybersecurity",
+      "image": "https://picsum.photos/100/100?random=13",
+      "bio": "Cybersecurity expert and ethical hacker"
+    }
+  ],
+  "schedule": [
+    {
+      "time": "9:00 AM",
+      "event": "Opening Keynote",
+      "speaker": "Dr. Aisha",
+      "duration": "60 minutes"
+    },
+    {
+      "time": "10:30 AM",
+      "event": "AI in Healthcare",
+      "speaker": "Mr. Rohan",
+      "duration": "90 minutes"
+    },
+    {
+      "time": "12:00 PM",
+      "event": "Lunch Break",
+      "speaker": "-",
+      "duration": "60 minutes"
+    },
+    {
+      "time": "1:30 PM",
+      "event": "Web3 Blockchain",
+      "speaker": "Ms. Priya",
+      "duration": "90 minutes"
+    },
+    {
+      "time": "3:00 PM",
+      "event": "Cybersecurity",
+      "speaker": "Mr. Vikram",
+      "duration": "90 minutes"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "ai",
+      "name": "AI in Healthcare",
+      "description": "Exploring how artificial intelligence is revolutionizing healthcare"
+    },
+    {
+      "id": "blockchain",
+      "name": "Web3 Blockchain",
+      "description": "Understanding blockchain technology and Web3 applications"
+    },
+    {
+      "id": "security",
+      "name": "Cybersecurity",
+      "description": "Latest trends in cybersecurity and data protection"
+    }
+  ],
+  "theme": {
+    "primaryColor": "#1a3a6e",
+    "secondaryColor": "#c9993a",
+    "accentColor": "#0a1628",
+    "lightBackground": "#f8f4ed",
+    "fontFamily": "Segoe UI, Tahoma, Geneva, Verdana, sans-serif"
+  },
+  "form": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "text",
+        "label": "Full Name",
+        "required": true,
+        "minLength": 3,
+        "placeholder": "Enter your full name"
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "label": "Email Address",
+        "required": true,
+        "placeholder": "your@email.com"
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "label": "Phone Number",
+        "required": true,
+        "placeholder": "+91-XXXXXXXXXX"
+      },
+      {
+        "name": "ticket",
+        "type": "select",
+        "label": "Select Ticket Type",
+        "required": true,
+        "options": ["general", "professional", "vip", "student"]
+      }
+    ]
+  },
+  "social": {
+    "twitter": "https://twitter.com/techfront2024",
+    "facebook": "https://facebook.com/techfront2024",
+    "linkedin": "https://linkedin.com/company/techfront2024",
+    "instagram": "https://instagram.com/techfront2024"
+  },
+  "version": "1.0.0",
+  "lastUpdated": "2024-04-20"
+}
