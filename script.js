@@ -1,7 +1,18 @@
-// ============================= 
-// TechFront 2024 Conference    
-// JavaScript Functionality     
-// ============================= 
+/**
+ * TechFront 2024 Conference Website
+ * JavaScript Module - Main Entry Point
+ * 
+ * This module handles:
+ * - Form validation and submission
+ * - Smooth scrolling navigation
+ * - Dynamic navigation highlighting
+ * - Interactive ticket counters
+ * - User notifications
+ * 
+ * @author TechFront Development Team
+ * @version 1.0.0
+ * @date 2024-04-20
+ */
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log('TechFront 2024 - Conference website loaded');
@@ -17,6 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // FORM VALIDATION              
 // ============================= 
 
+/**
+ * Initialize form validation for registration form
+ * Handles client-side validation before submission
+ */
 function initializeFormValidation() {
   const form = document.querySelector('.registration-form');
   
@@ -46,6 +61,14 @@ function initializeFormValidation() {
   });
 }
 
+/**
+ * Validates form fields
+ * @param {string} name - User's full name
+ * @param {string} email - User's email address
+ * @param {string} phone - User's phone number
+ * @param {string} ticket - Selected ticket type
+ * @returns {boolean} - True if all validations pass
+ */
 function validateForm(name, email, phone, ticket) {
   // Validate name
   if (name.length < 3) {
@@ -76,6 +99,11 @@ function validateForm(name, email, phone, ticket) {
   return true;
 }
 
+/**
+ * Display notification message to user
+ * @param {string} message - Message to display
+ * @param {string} type - Notification type ('success' or 'error')
+ */
 function showNotification(message, type) {
   const notification = document.createElement('div');
   notification.className = `notification notification-${type}`;
