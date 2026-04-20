@@ -1,4 +1,4 @@
-# pract.12
+# reposetry
 <!DOCTYPE html>
 <html lang="en">
 <head>
