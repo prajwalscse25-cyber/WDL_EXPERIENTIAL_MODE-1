@@ -1,0 +1,211 @@
+/* TechFront 2024 - styles.css */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Segoe UI', Tahoma, sans-serif;
+background-color: #f0f4f8;
+color: #1e293b;
+line-height: 1.6;
+}
+/* Header */
+header {
+background: linear-gradient(135deg, #0d1b2a, #1558b0);
+color: white;
+text-align: center;
+padding: 30px 20px;
+}
+header h1 {
+font-size: 2rem;
+margin-bottom: 12px;
+}
+header img {
+max-width: 100%;
+border-radius: 8px;
+border: 3px solid #f4a261;
+}
+.intro strong {
+color: #f4a261;
+}
+/* Nav */
+nav {
+background-color: #0d1b2a;
+text-align: center;
+padding: 10px;
+position: sticky;
+top: 0;
+}
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 8px;
+}
+nav a {
+color: white;
+text-decoration: none;
+padding: 6px 14px;
+border-radius: 20px;
+}
+nav a:hover {
+background-color: #1a73e8;
+}
+/* Sections */
+section {
+max-width: 1000px;
+margin: 30px auto;
+padding: 24px;
+background: white;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+section h2 {
+color: #1558b0;
+margin-bottom: 16px;
+border-bottom: 3px solid #f4a261;
+padding-bottom: 8px;
+display: inline-block;
+}
+/* Table */
+table {
+width: 100%;
+border-collapse: collapse;
+}
+table th {
+background-color: #1a73e8;
+color: white;
+padding: 10px;
+}
+table td {
+padding: 10px;
+border: 1px solid #cbd5e1;
+}
+table tbody tr:nth-child(even) {
+background-color: #f8faff;
+}
+/* Speakers */
+.speakers-container {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+justify-content: center;
+}
+.speaker {
+text-align: center;
+width: 180px;
+padding: 16px;
+background: #f0f4f8;
+border-radius: 10px;
+}
+.speaker img {
+border-radius: 50%;
+border: 3px solid #1a73e8;
+margin-bottom: 8px;
+}
+/* Tickets */
+.tickets-container {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+justify-content: center;
+}
+.ticket-card {
+width: 200px;
+padding: 20px;
+text-align: center;
+border: 1px solid #cbd5e1;
+border-radius: 10px;
+background: white;
+}
+.ticket-card .price {
+font-size: 1.5rem;
+font-weight: bold;
+color: #1a73e8;
+margin: 8px 0;
+}
+progress {
+width: 100%;
+accent-color: #16a34a;
+}
+/* Form */
+.form-group {
+margin-bottom: 14px;
+}
+.form-group label {
+display: block;
+font-weight: 600;
+margin-bottom: 4px;
+}
+.form-group input,
+.form-group select {
+width: 100%;
+padding: 9px 12px;
+border: 1.5px solid #cbd5e1;
+border-radius: 6px;
+font-size: 0.95rem;
+}
+.form-group input:focus,
+.form-group select:focus {
+border-color: #1a73e8;
+outline: none;
+}
+fieldset {
+border: 1.5px solid #cbd5e1;
+border-radius: 6px;
+padding: 12px;
+}
+.submit-btn {
+width: 100%;
+padding: 12px;
+background-color: #1a73e8;
+color: white;
+font-size: 1rem;
+font-weight: 600;
+border: none;
+border-radius: 7px;
+cursor: pointer;
+margin-top: 8px;
+}
+.submit-btn:hover {
+background-color: #1558b0;
+}
+/* Video */
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+height: 0;
+overflow: hidden;
+border-radius: 8px;
+}
+.video-container iframe {
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 100%;
+border: none;
+}
+/* Footer */
+footer {
+background-color: #0d1b2a;
+color: #94a3b8;
+text-align: center;
+padding: 24px;
+}
+footer a {
+color: #f4a261;
+text-decoration: none;
+}
+/* Responsive */
+@media (max-width: 768px) {
+.speakers-container,
+.tickets-container {
+flex-direction: column;
+align-items: center;
+}
+.speaker, .ticket-card {
+width: 100%;
+max-width: 300px;
+}
+}
